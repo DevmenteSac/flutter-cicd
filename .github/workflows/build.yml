@@ -14,6 +14,7 @@ jobs:
 
     # The machine, we can also use windows-latest, macos-latest or ubuntu-latest
     # We are choosing macos-latest because we will be also building for iOS
+    name: Build & Release 
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
