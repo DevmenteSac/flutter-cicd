@@ -1,5 +1,7 @@
 # flutter_cicd
 
+[![Flutter](https://github.com/DevmenteSac/flutter-cicd/actions/workflows/build.yml/badge.svg)](https://github.com/DevmenteSac/flutter-cicd/actions/workflows/build.yml)
+
 A new Flutter project.
 
 ## Getting Started
