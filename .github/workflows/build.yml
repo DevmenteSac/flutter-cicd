@@ -10,7 +10,6 @@ on:
       - main
       # - dev
 
-
 jobs:  
   build:
     # The machine, we can also use windows-latest, macos-latest or ubuntu-latest      
@@ -143,10 +142,9 @@ jobs:
       #     token: ${{ secrets.TOKEN }}
 
         #16 Create Release Without IOS
-      - name: Create Release
+      - name: Create Release Android
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/flutter-apk/app-release.apk,build/app/outputs/bundle/release/app-release.aab"
           tag: v${{ env.VERSION }}
           token: ${{ secrets.TOKEN }}
-          
