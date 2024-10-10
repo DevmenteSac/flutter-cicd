@@ -78,7 +78,7 @@ jobs:
 
         #10 Building App Bundle (aab) de forma ofuscada
       - name: Build appBundle
-        run: flutter build appbundle --obfuscate
+        run: flutter build appbundle --obfuscate --split-debug-info=build/app/outputs/bundle/release
 
       #   #11 Build IPA ( IOS Build )
       # - name: Build IPA
