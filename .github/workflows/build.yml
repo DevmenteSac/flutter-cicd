@@ -25,12 +25,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+        #2 Cache Java dependencies
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            maven-${{ runner.os }}-
+
         #2 Setup Java
       - name: Set Up Java
         uses: actions/setup-java@v3.12.0
         with:
           distribution: 'oracle'
           java-version: '17'
+          cache: 'maven'  # Enables caching for Maven dependencies
 
         #3 Setup Flutter
       - name: Set Up Flutter
